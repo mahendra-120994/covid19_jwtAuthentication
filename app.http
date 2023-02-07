@@ -1,0 +1,56 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+###
+GET http://localhost:3000/states
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0eUAxMjM.GxfgWbLe414ZC-5I53UDAAGwzddK9qpVWslxumPdOVU
+###
+
+GET http://localhost:3000/states/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0eUAxMjM.GxfgWbLe414ZC-5I53UDAAGwzddK9qpVWslxumPdOVU
+###
+
+POST http://localhost:3000/districts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0eUAxMjM.GxfgWbLe414ZC-5I53UDAAGwzddK9qpVWslxumPdOVU
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+###
+
+GET http://localhost:3000/districts/46
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0eUAxMjM.GxfgWbLe414ZC-5I53UDAAGwzddK9qpVWslxumPdOVU
+###
+
+DELETE http://localhost:3000/districts/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0eUAxMjM.GxfgWbLe414ZC-5I53UDAAGwzddK9qpVWslxumPdOVU
+
+###
+
+PUT http://localhost:3000/districts/46
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0eUAxMjM.GxfgWbLe414ZC-5I53UDAAGwzddK9qpVWslxumPdOVU
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+###
+
+GET http://localhost:3000/states/5/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0eUAxMjM.GxfgWbLe414ZC-5I53UDAAGwzddK9qpVWslxumPdOVU
+###
